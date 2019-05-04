@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="container mt-4">
+
+<div class="card text-center">
+  <div class="card-header">
+  <h2>BLOG DETAILS</h2>  
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ blog.title }}</h5>
+    <p class="card-text">{{ blog.description }}</p>
+    <a href="{% url 'blog:list' %}" class="btn btn-primary">Back to Blog</a>
+  </div>
+  <div class="card-footer">
+<small class="text-muted">Posted on {{ blog.date }}</small>
+</div>
+</div>
+
+</div>
+
+{% endblock %}
